@@ -14,6 +14,7 @@ app.use(cors());
 //routes
 
 //authentication Route
+//* anything that passes through /auth will get this middleware.
 app.use('/auth', jwtAuth);
 
 //Dashboard Route

@@ -18,7 +18,7 @@ router.post("/register", validInfo, async (req, res) => {
 
         //* chekc if that user already exists...
         if (user.rows.length !== 0){
-            return res.status(401).send("User already exists.")
+            return res.status(401).json("User already exists.")
         }
         //* bcyrpt password... to insert into DB
         const saltRound = 10;

@@ -8,7 +8,7 @@ router.get("/", authorization, async (req, res) => {
     try {
         // payload will be set to users UUID from AUTH middleware
         const user = await pool.query(
-            "SELECT * user_name FROM users WHERE user_id = $1", 
+            "SELECT user_name FROM users WHERE user_id = $1", 
             [req.user]
         )
 
